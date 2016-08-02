@@ -6,7 +6,7 @@ module ActiveAdmin
 
       # Return an image tag with background of given locale
       def flag_icon(locale)
-        content_tag :i, '', class: "flag flag-#{locale}", title: I18n.t("active_admin.globalize.language.#{locale}")
+        content_tag :i, '', class: "flag flag-#{locale}", title: locale
       end
 
     end

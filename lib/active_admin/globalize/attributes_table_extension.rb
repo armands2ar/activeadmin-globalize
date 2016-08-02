@@ -113,7 +113,7 @@ module ActiveAdmin
             default = 'default' if locale == I18n.default_locale
             content_tag(:li, class: 'translation-tab') do
               I18n.with_locale(locale) do
-                content_tag(:a, I18n.t(:"active_admin.globalize.language.#{locale}"), href: ".locale-#{locale}", class: default)
+                content_tag(:a, locale, href: ".locale-#{locale}", class: default)
               end
             end
           end.join.html_safe

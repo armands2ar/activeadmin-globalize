@@ -3,9 +3,7 @@ module ActiveAdmin::Globalize
 
     module Methods
       def translation_names
-        self.translations.map(&:locale).map do |locale|
-          I18n.t("active_admin.globalize.language.#{locale}")
-        end.uniq.sort
+        self.translations.map(&:locale).uniq.sort
       end
     end
 
